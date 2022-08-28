@@ -1,30 +1,30 @@
-//   function mergeSort(arr) {
-//     // debugger 
-//     if (arr.length <= 1) return arr
+  function mergeSort(arr) {
+    // debugger 
+    if (arr.length <= 1) return arr
 
-//     let mid = Math.floor(arr.length / 2)
+    let mid = Math.floor(arr.length / 2)
 
-//     let left = mergeSort(arr.slice(0, mid))
-//     let right = mergeSort(arr.slice(mid))
-//     return merge(left, right)
-//   }
-//   console.log([3, 5, 8, 5, 99, 1])
-//   console.log(mergeSort([3, 5, 8, 5, 99, 1])) // [1, 3, 5, 5, 8, 99]
+    let left = mergeSort(arr.slice(0, mid))
+    let right = mergeSort(arr.slice(mid))
+    return merge(left, right)
+  }
+  console.log([3, 5, 8, 5, 99, 1])
+  console.log(mergeSort([3, 5, 8, 5, 99, 1])) // [1, 3, 5, 5, 8, 99]
 
 
-//   function merge(left, right) {
-//     let sortedArr = [] 
-//     while (left.length != 0 && right.length != 0) {
+  function merge(left, right) {
+    let sortedArr = [] 
+    while (left.length != 0 && right.length != 0) {
 
-//         if (left[0] < right[0]) {
-//         sortedArr.push(left.shift())
-//       } else {
-//         sortedArr.push(right.shift())
-//       }
-//     }
+        if (left[0] < right[0]) {
+        sortedArr.push(left.shift())
+      } else {
+        sortedArr.push(right.shift())
+      }
+    }
 
-//     return [...sortedArr, ...left, ...right]
-//   }
+    return [...sortedArr, ...left, ...right]
+  }
 
 // function getReapetedNum(numArr){
 //     let reapeatedNumArr = []
